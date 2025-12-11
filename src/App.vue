@@ -1,8 +1,14 @@
 <template>
-<router-view/>
+
+<app-header/>
+  <main>
+    <router-view/>
+  </main>
 </template>
 
 <script setup>
+
+  import  AppHeader  from './components/AppHeader.vue'
 
 
 
@@ -10,16 +16,14 @@
 
 
 <style scoped lang="scss">
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
+    @import './styles/setup/variables';
+
+  
+    main{
+      margin-top: $header-height-wide;
+        background-color: #fff;
+        width: 100vw;
+    }
+
 </style>

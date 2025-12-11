@@ -1,0 +1,102 @@
+/* app global css */
+:root {
+  
+  // Brand colors
+  --primary: #5806C7;
+  --secondary: #F6540B;
+
+  /* Backgrounds */
+  --bg-main: #FBF8FF; /* Light pinkish background */
+  --bg-secondary: #FFFFFF; /* Pure white lighter surface */
+
+  --dark-bg:#0B0119; /* Dark background */
+  --dark-bg-secondary:#130822; /* Dark, lighter surface */
+
+
+  /* Text Colors */
+  --text-primary: #404040; /* Gray for primary text */
+
+
+
+  /* Articles Colors */ 
+
+  --color-gold:#E2B00D;
+
+  --color-green:#55EBB1;
+
+  --color-blue:#21C8FC;
+
+  --color-bottle-green:#377D22;
+
+  --color-orange:#EA5619;
+
+  --color-scarlet:#A31F1F;
+
+  --color-pink:#F202D5;
+
+
+
+  --small-radius: 6px;
+  --medium-radius: 8px;
+
+  --header-height-wide:114px;
+  --header-height-narrow:77px;
+
+  --header-bg-color-wide:#ffff;
+  --header-bg-color-narrow:--primary;
+
+
+  --header-shadow: 0px 4px 69.7px 0px #5806C724;
+
+  --narrow-screen: 900px;
+  --medium-screen: 1216px;
+  --large-screen: 1536px;
+
+  --max-width-screen: 1200px;
+}
+
+// SCSS Colors
+
+// Brand Colors
+
+$primary: var(--primary);
+$secondary: var(--secondary);
+
+// Backgrounds
+$bg-main: var(--bg-main);
+$bg-secondary: var(--bg-secondary);
+
+$dark-bg: var(--dark-bg);
+$dark-bg-secondary: var(--dark-bg-secondary);
+
+// Text Colors
+$text-primary: var(--text-primary);
+
+// Article Colors
+$color-gold: var(--color-gold);
+$color-green: var(--color-green);
+$color-blue: var(--color-blue);
+$color-bottle-green: var(--color-bottle-green);
+$color-orange: var(--color-orange);
+$color-scarlet: var(--color-scarlet);
+$color-pink: var(--color-pink);
+
+
+
+// HEADER
+$header-height-wide:var(--header-height-wide);
+$header-height-narrow: var(--header-height-narrow);
+
+$header-bg-color-wide:var(--header-bg-color-wide);
+$header-bg-color-narrow:var(--header-bg-color-narrow);
+
+$header-shadow:var(--header-shadow);
+
+
+
+// LAYOUT BREAKPOINTS
+$narrow-screen: var(--narrow-screen);
+$medium-screenl: var(--medium-screen);
+$large-screen: var(--large-screen);
+
+$max-width-screen:var(--max-width-screen)
