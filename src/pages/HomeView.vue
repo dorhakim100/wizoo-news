@@ -1,9 +1,10 @@
 <template>
-  <h1>bla</h1>
+  <HomeDashboard />
 </template>
 
 <script setup>
-import Merkaz from '../components/common/Merkaz.vue'
+import HomeDashboard from '../components/HomeDashboard.vue'
+import dashboardJson from '../assets/jsons/home-dashboard/home-dashboard.json'
 </script>
 
 <style scoped lang="scss"></style>
