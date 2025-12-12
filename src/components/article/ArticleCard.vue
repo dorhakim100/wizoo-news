@@ -2,7 +2,9 @@
   <article :class="`article-card ${isMain ? 'main' : ''} pointer`">
     <div class="img-container">
       <img :src="article.img" :alt="article.type" />
-      <label :class="`article-label ${article.type}`">{{ article.type }}</label>
+      <CustomLabel :type="article.type">
+        {{ articleService.getHebrewType(article.type) }}
+      </CustomLabel>
     </div>
     <div class="title-container">
       <h3 class="title wrap-ellipsis">
@@ -20,6 +22,10 @@
 
 <script setup>
 import { defineProps } from 'vue'
+
+import { articleService } from '../../services/article/article.service'
+
+import CustomLabel from '../common/CustomLabel.vue'
 
 import { Divider } from 'ant-design-vue'
 
@@ -61,14 +67,10 @@ console.log(props.article)
       width: 100%;
       height: 100%;
     }
-    .article-label {
+    .custom-label {
       position: absolute;
       bottom: 0;
       inset-inline-start: 0;
-      padding: 5px 20px;
-
-      clip-path: polygon(10% 0, 100% 0, 100% 100%, -14% 100%);
-      background-color: red;
     }
   }
 
@@ -92,7 +94,7 @@ console.log(props.article)
 
     .img-container {
       grid-row: 1/-1;
-      .article-label {
+      .custom-label {
         padding: 10px 30px;
       }
     }

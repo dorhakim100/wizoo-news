@@ -12,3 +12,30 @@ export function getRandomInt(min, max) {
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
+
+export function getColorNameFromType(type) {
+  switch (type) {
+    case 'urban-renewal':
+      return 'green'
+
+    case 'industry-news':
+      return 'orange'
+    case 'income-producing':
+      return 'blue'
+
+    case 'architecture':
+      return 'pink'
+
+    case 'residential-real-estate':
+      return 'gold'
+
+    case 'opinions-analysis':
+      return 'bottle-green'
+
+    case 'faces-behind':
+      return 'scarlet'
+
+    default:
+      return 'gray'
+  }
+}
