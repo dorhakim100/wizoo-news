@@ -60,6 +60,8 @@ console.log(props.mostViewed)
 </script>
 
 <style scoped lang="scss">
+@import '../styles/setup/variables';
+
 .home-dashboard-container {
   display: grid;
   grid-template-columns: 1fr 3px auto;
@@ -71,28 +73,25 @@ console.log(props.mostViewed)
       grid-column: 1/2;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
       gap: 15px;
       align-items: start;
 
-      .article-card:first-of-type {
+      .article-card.main {
         grid-column: 1/-1;
-        //   background-color: red;
-        img {
-          // width: 300px;
-        }
+        justify-self: center;
       }
     }
   }
 
   .ant-divider {
-    // width: 5px;
     height: 100%;
-    background-color: red;
+    background-color: $primary;
     grid-column: 2/3;
     grid-row: 1/2;
     align-self: stretch;
     justify-self: center;
+    opacity: 42%;
   }
 
   .side-articles-container {
