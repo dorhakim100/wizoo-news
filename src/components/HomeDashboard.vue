@@ -68,8 +68,6 @@ const props = defineProps({
     required: false,
   },
 })
-
-console.log(props.event1)
 </script>
 
 <style scoped lang="scss">

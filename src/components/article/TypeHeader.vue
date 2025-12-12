@@ -39,6 +39,8 @@ const color = getColorNameFromType(props.type)
   align-items: center;
   justify-content: space-between;
 
+  margin: 2em 0;
+
   &::after {
     position: absolute;
     content: '';

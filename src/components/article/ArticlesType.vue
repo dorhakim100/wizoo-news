@@ -1,14 +1,33 @@
 <template>
-  <TypeHeader :type="type">{{ articleService.getHebrewType(type) }}</TypeHeader>
+  <div class="articles-type-container">
+    <TypeHeader :type="type">{{
+      articleService.getHebrewType(type)
+    }}</TypeHeader>
+    <div class="articles-container">
+      <ArticleCard
+        v-for="article in minArray"
+        :key="`${article.type}-${makeId()}`"
+        :is-main="false"
+        :article="article"
+      />
+    </div>
+  </div>
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+import { computed, defineProps } from 'vue'
 
 import { articleService } from '../../services/article/article.service'
 
 import TypeHeader from './TypeHeader.vue'
 import ArticleCard from './ArticleCard.vue'
+import {
+  getArrayOfNumbers,
+  getRandomInt,
+  makeId,
+} from '../../services/utils.service'
+
+const MINMUM_VALUE = 4
 
 const props = defineProps({
   articles: {
@@ -20,6 +39,26 @@ const props = defineProps({
     required: true,
   },
 })
+
+const minArray = computed(() => {
+  return props.articles.length >= MINMUM_VALUE
+    ? props.articles
+    : getArrayOfNumbers(0, 3).map(
+        () => props.articles[getRandomInt(0, props.articles.length - 1)]
+      )
+})
+
+console.log(minArray.value)
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.articles-type-container {
+  margin: 2em 0;
+  display: grid;
+
+  .articles-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+</style>

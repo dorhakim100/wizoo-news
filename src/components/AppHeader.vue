@@ -206,7 +206,8 @@ const navigateToHome = () => {
         gap: 30px;
       }
       .custom-search-container {
-        width: 270px;
+        width: 260px;
+        margin-inline-end: 5px;
       }
     }
   }

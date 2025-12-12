@@ -56,9 +56,9 @@ console.log(props.article)
   height: 316px;
 
   &:not(.main) {
-    // max-width: 282px;
-    img {
-      // max-width: 282px;
+    max-width: 282px;
+    .img-container {
+      max-height: 160px;
     }
   }
 
