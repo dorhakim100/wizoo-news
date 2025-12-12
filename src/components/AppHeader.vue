@@ -1,6 +1,20 @@
 <template>
-  <header :class="`header-container ${isMobile ? 'mobile' : ''}`">
-    <img :src="`${isMobile ? mobile : desktop}`" alt="" />
+  <header
+    :class="`header-container ${isMobile ? 'mobile' : ''} ${
+      !isTop0 ? 'scrolled' : ''
+    }`"
+  >
+    <img
+      :src="`${isMobile ? mobile : desktop}`"
+      :class="`${!isTop0 ? 'hide' : ''}`"
+      alt=""
+    />
+    <div
+      :class="`basic-logo-container pointer ${!isTop0 ? 'scrolled' : ''}`"
+      @click="navigateToHome()"
+    >
+      <MerkazBasicLogo class="basic-logo" />
+    </div>
 
     <div class="links-container">
       <div class="upper-container">
@@ -14,7 +28,7 @@
             {{ link.title }}
           </a>
         </nav>
-        <div class="socials-container">
+        <div :class="`socials-container ${!isTop0 ? 'hide' : ''}`">
           <div
             class="icon-container circle pointer"
             v-for="social in socials"
@@ -26,7 +40,7 @@
         </div>
       </div>
 
-      <div class="lower-container">
+      <div :class="`lower-container ${!isTop0 ? 'opacity-0' : ''}`">
         <nav class="lower-nav">
           <a
             v-for="link in lowerLinks"
@@ -45,24 +59,29 @@
 </template>
 
 <script setup>
-import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
 
 import { navigateToLink } from '../services/utils.service'
 import { mobileBreakpoint } from '../config/css-variables'
+import { ROUTES } from '../router/const'
 
 import CustomSearch from '../components/common/CustomSearch.vue'
-
 import HeaderMobileMenu from '../assets/icons/header-mobile-menu.svg'
 
 import desktop from '../../public/logo-desktop.png'
+import MerkazBasicLogo from '../../public/merkaz-logo-lower.svg'
 import mobile from '../../public/logo-mobile.png'
 
 import { links } from '../assets/jsons/app-header/header-links.json'
 import { socials } from '../assets/jsons/app-header/socials.json'
 
+const router = useRouter()
+
 const searchValue = ref('')
-const isTop0 = ref(true)
+
 const isMobile = ref(window.innerWidth <= mobileBreakpoint)
+const isTop0 = ref(true)
 
 const upperLinks = computed(() => links.filter((link) => link.isUpper))
 const lowerLinks = computed(() => links.filter((link) => !link.isUpper))
@@ -79,16 +98,21 @@ onUnmounted(() => {
 
 function handleScroll() {
   const pixelsFromTop = window.scrollY
-  if (pixelsFromTop !== 0) isTop0.value = true
-  else isTop0.value = false
+  if (pixelsFromTop !== 0) {
+    isTop0.value = false
+  } else {
+    isTop0.value = true
+  }
 }
 
 function handleResize() {
-  console.log(isMobile.value)
-
   window.innerWidth <= mobileBreakpoint
     ? (isMobile.value = true)
     : (isMobile.value = false)
+}
+
+const navigateToHome = () => {
+  router.push(`${ROUTES.HOME}`)
 }
 </script>
 
@@ -96,6 +120,7 @@ function handleResize() {
 @import '../styles/setup/_variables';
 
 .header-container {
+  position: relative;
   position: fixed;
   left: 0;
   right: 0;
@@ -107,9 +132,23 @@ function handleResize() {
 
   display: grid;
   grid-template-columns: auto 1fr;
+  transition: 0.3s ease;
+  transition: background-color 0s;
 
   img {
     padding: 1.4em;
+    transition: 0.3s ease;
+  }
+
+  .basic-logo-container {
+    position: absolute;
+    inset-inline-start: -50px;
+    top: 5px;
+    transition: 0.3s ease;
+
+    &.scrolled {
+      inset-inline-start: 10px;
+    }
   }
 
   .links-container {
@@ -170,7 +209,16 @@ function handleResize() {
       }
     }
   }
+  &.scrolled {
+    height: 57px;
+    background-color: $primary;
 
+    padding-inline-start: 15px;
+
+    .upper-nav {
+      margin-inline-start: 50px;
+    }
+  }
   &.mobile {
     height: $header-height-narrow;
     background-color: $primary;
