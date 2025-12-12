@@ -86,11 +86,14 @@ watch(searchValue, (newVal, oldVal) => {
 
   .links-container {
     display: grid;
+    grid-template-rows: 57px 1fr;
 
     .upper-container {
       background-color: $primary;
       color: $text-white;
       padding: 15px;
+      height: 57px;
+      align-self: start;
 
       display: flex;
       align-items: center;
@@ -123,15 +126,19 @@ watch(searchValue, (newVal, oldVal) => {
     }
 
     .lower-container {
+      align-self: center;
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      padding: 15px;
+      padding: 0 15px;
 
       .lower-nav {
         display: flex;
         gap: 30px;
+      }
+      .custom-search-container {
+        width: 270px;
       }
     }
   }
