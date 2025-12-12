@@ -25,6 +25,13 @@ body {
     min-height: 100vh;
 
     margin-top: $header-height-wide;
+    display: grid;
+    justify-items: center;
+
+    .page-container {
+      width: $max-width-screen;
+      margin: 0 auto;
+    }
   }
 }
 

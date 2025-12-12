@@ -1,12 +1,19 @@
 <template>
   <article :class="`article-card ${isMain ? 'main' : ''}`">
     <img :src="article.img" :alt="article.type" />
-    <h3>{{ article.title }}</h3>
+    <h3 class="text-overflow">{{ article.title }}</h3>
+    <div class="writer-date-container">
+      <span>{{ article.writer }}</span>
+      <Divider type="vertical" />
+      <span>{{ article.date }}</span>
+    </div>
   </article>
 </template>
 
 <script setup>
 import { defineProps } from 'vue'
+
+import { Divider } from 'ant-design-vue'
 
 const props = defineProps({
   article: {
@@ -22,12 +29,25 @@ console.log(props.article)
 </script>
 
 <style scoped lang="scss">
+@import '../../styles/setup/_variables';
+
 .article-card {
   //   width: 199px;
   //   height: 100;
+  text-align: start;
 
+  max-width: 282px;
   img {
     max-width: 282px;
+  }
+
+  .writer-date-container {
+    display: flex;
+    align-items: center;
+
+    .ant-divider {
+      background-color: $text-primary;
+    }
   }
 
   &.main {

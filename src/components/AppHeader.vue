@@ -124,6 +124,7 @@ const navigateToHome = () => {
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 20;
 
   height: $header-height-wide;
   background-color: $header-bg-color-wide;

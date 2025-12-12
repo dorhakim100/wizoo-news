@@ -1,11 +1,13 @@
 <template>
-  <HomeDashboard
-    :articles="articles"
-    :mostViewed="mostViewed"
-    :event1="event1"
-    :event2="event2"
-    :vod="vod"
-  />
+  <div class="page-container">
+    <HomeDashboard
+      :articles="articles"
+      :mostViewed="mostViewed"
+      :event1="event1"
+      :event2="event2"
+      :vod="vod"
+    />
+  </div>
 </template>
 
 <script setup>
