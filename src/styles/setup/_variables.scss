@@ -13,6 +13,7 @@
 
   /* Text Colors */
   --text-primary: #404040; /* Gray for primary text */
+  --text-white: #ffffff;
 
   /* Articles Colors */
 
@@ -45,6 +46,8 @@
   --header-bg-color-wide: #ffff;
   --header-bg-color-narrow: --primary;
 
+  --header-socials-background: #fbf8ff;
+
   --header-shadow: 0px 4px 69.7px 0px #5806c724;
 
   --narrow-screen: 900px;
@@ -70,6 +73,7 @@ $dark-bg-secondary: var(--dark-bg-secondary);
 
 // Text Colors
 $text-primary: var(--text-primary);
+$text-white: var(--text-white);
 
 // Article Colors
 $color-gold: var(--color-gold);
@@ -88,6 +92,8 @@ $header-height-narrow: var(--header-height-narrow);
 
 $header-bg-color-wide: var(--header-bg-color-wide);
 $header-bg-color-narrow: var(--header-bg-color-narrow);
+
+$header-socials-background: var(--header-socials-background);
 
 $header-shadow: var(--header-shadow);
 

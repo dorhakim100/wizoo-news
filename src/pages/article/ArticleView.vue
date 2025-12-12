@@ -1,16 +1,9 @@
 <template>
-
-<h1>bla</h1>
-<merkaz/>
-
+  <h1>bla</h1>
 </template>
 
 <script setup>
-    import Merkaz from '../../components/common/Merkaz.vue';
-
+import Merkaz from '../../components/common/Merkaz.vue'
 </script>
 
-<style scoped lang="scss">
-
-
-</style>
+<style scoped lang="scss"></style>

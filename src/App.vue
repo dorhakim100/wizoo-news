@@ -1,25 +1,14 @@
 <template>
-
-<app-header/>
+  <AppHeader />
   <main>
-    <router-view/>
+    <router-view />
   </main>
 </template>
 
 <script setup>
-
-  import  AppHeader  from './components/AppHeader.vue'
-
-
-
+import AppHeader from './components/AppHeader.vue'
 </script>
 
-
 <style scoped lang="scss">
-
-    @import './styles/setup/variables';
-
-  
-
-
+@import './styles/setup/variables';
 </style>

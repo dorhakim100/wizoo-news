@@ -1,0 +1,76 @@
+{
+  "links": [
+    {
+      "title": "נדל״ן למגורים",
+      "link": "https://www.nadlancenter.co.il/living-real-estate",
+      "isUpper": true
+    },
+    {
+      "title": "התחדשות עירונית",
+      "link": "https://www.nadlancenter.co.il/urban-innovation",
+      "isUpper": true
+    },
+    {
+      "title": "נדל״ן מניב השקעות",
+      "link": "https://www.nadlancenter.co.il/fruitfull-real-estate",
+      "isUpper": true
+    },
+    {
+      "title": "דעות וניתוחים",
+      "link": "https://www.nadlancenter.co.il/magazine/category/182",
+      "isUpper": true
+    },
+    {
+      "title": "חדשות הענף",
+      "link": "https://www.nadlancenter.co.il/magazine/category/1768",
+      "isUpper": true
+    },
+    {
+      "title": "עיצוב ואדריכלות",
+      "link": "https://www.nadlancenter.co.il/design-architect",
+      "isUpper": true
+    },
+
+    {
+      "title": "נדל״ן TV",
+      "link": "https://www.nadlancenter.co.il/vod",
+      "isUpper": true
+    },
+    {
+      "title": "פודקאסטים",
+      "link": "https://www.nadlancenter.co.il/podcast",
+      "isUpper": true
+    },
+
+    {
+      "title": "מדד התחדשות עירונית",
+      "link": "https://madadithadshut.co.il/",
+      "isUpper": false
+    },
+    {
+      "title": "מחשבונים",
+      "link": "https://www.nadlancenter.co.il/calculator",
+      "isUpper": false
+    },
+    {
+      "title": "נדל״ן בראש צעיר",
+      "link": "https://www.nadlancenter.co.il/contact-us",
+      "isUpper": false
+    },
+    {
+      "title": "אודות מרכז נדל״ן",
+      "link": "https://www.nadlancenter.co.il/about",
+      "isUpper": false
+    },
+    {
+      "title": "מכללת מרכז הנדל״ן",
+      "link": "https://www.nadlancenter.co.il/contact-us",
+      "isUpper": false
+    },
+    {
+      "title": "צור קשר",
+      "link": "https://www.nadlancenter.co.il/contact-us",
+      "isUpper": false
+    }
+  ]
+}
