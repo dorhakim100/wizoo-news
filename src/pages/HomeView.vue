@@ -4,6 +4,7 @@
     :mostViewed="mostViewed"
     :event1="event1"
     :event2="event2"
+    :vod="vod"
   />
 </template>
 
