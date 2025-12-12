@@ -1,6 +1,6 @@
 <template>
-  <header class="header-container">
-    <img :src="`${desktop}`" alt="" />
+  <header :class="`header-container ${isMobile ? 'mobile' : ''}`">
+    <img :src="`${isMobile ? mobile : desktop}`" alt="" />
 
     <div class="links-container">
       <div class="upper-container">
@@ -40,28 +40,56 @@
         <CustomSearch v-model:searchValue="searchValue" />
       </div>
     </div>
+    <HeaderMobileMenu v-if="isMobile" />
   </header>
 </template>
 
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 
 import { navigateToLink } from '../services/utils.service'
+import { mobileBreakpoint } from '../config/css-variables'
 
 import CustomSearch from '../components/common/CustomSearch.vue'
 
+import HeaderMobileMenu from '../assets/icons/header-mobile-menu.svg'
+
 import desktop from '../../public/logo-desktop.png'
+import mobile from '../../public/logo-mobile.png'
+
 import { links } from '../assets/jsons/app-header/header-links.json'
 import { socials } from '../assets/jsons/app-header/socials.json'
 
 const searchValue = ref('')
+const isTop0 = ref(true)
+const isMobile = ref(window.innerWidth <= mobileBreakpoint)
 
 const upperLinks = computed(() => links.filter((link) => link.isUpper))
 const lowerLinks = computed(() => links.filter((link) => !link.isUpper))
 
-watch(searchValue, (newVal, oldVal) => {
-  console.log(newVal)
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+  window.addEventListener('resize', handleResize)
 })
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('resize', handleResize)
+})
+
+function handleScroll() {
+  const pixelsFromTop = window.scrollY
+  if (pixelsFromTop !== 0) isTop0.value = true
+  else isTop0.value = false
+}
+
+function handleResize() {
+  console.log(isMobile.value)
+
+  window.innerWidth <= mobileBreakpoint
+    ? (isMobile.value = true)
+    : (isMobile.value = false)
+}
 </script>
 
 <style scoped lang="scss">
@@ -140,6 +168,27 @@ watch(searchValue, (newVal, oldVal) => {
       .custom-search-container {
         width: 270px;
       }
+    }
+  }
+
+  &.mobile {
+    height: $header-height-narrow;
+    background-color: $primary;
+    align-items: center;
+    grid-auto-flow: column;
+    padding: 12px;
+
+    img {
+      padding: 0;
+    }
+
+    svg {
+      justify-self: end;
+    }
+
+    .links-container {
+      position: absolute;
+      left: -5000px;
     }
   }
 }
