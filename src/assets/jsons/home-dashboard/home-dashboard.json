@@ -1,10 +1,10 @@
 {
   "event1": {
-    "img": "../../imgs/event-1.png",
+    "img": "src/assets/imgs/event-1.png",
     "link": ""
   },
   "event2": {
-    "img": "../../imgs/event-2.png",
+    "img": "src/assets/imgs/event-2.png",
     "link": ""
   },
   "articles": [
@@ -12,47 +12,47 @@
       "type": "urban-renewal",
       "title": "אושרה תוכנית העיצוב של צמח המרמן ואזורים למגדל יוקרה במתחם דפנה",
       "content": "",
-      "img": "../../imgs/event-1.png"
+      "img": "src/assets/imgs/article-1.png"
     },
     {
       "type": "industry-news",
       "title": "בכירה במשרד השיכון: 'הרחבת הכפר רג'ר נועדה לאפשר למשפחות מהחלק הצפוני דיור משופר'",
       "content": "",
-      "img": "../../imgs/event-2.png"
+      "img": "src/assets/imgs/article-2.png"
     },
     {
       "type": "income-producing",
       "title": "גבאי גייסה 112 מיליון מתוך 144 מיליון שקל בגיוס לסדרת אג\"ח חדשה",
       "content": "",
-      "img": "../../imgs/event-2.png"
+      "img": "src/assets/imgs/article-2.png"
     },
     {
       "type": "architecture",
       "title": "יש לי חדר משלי: כך תעצבו לנער המתבגר חדר פרקטי, עם טאצ' אישי ולא משעמם",
       "content": "",
-      "img": "../../imgs/event-2.png"
+      "img": "src/assets/imgs/article-2.png"
     },
     {
       "type": "faces-behind",
       "title": "בכירה במשרד השיכון: \"הרחבת הכפר רג'ר נועדה לאפשר למשפחות מהחלק הצפוני דיור משופר\"",
       "content": "",
-      "img": "../../imgs/event-2.png"
+      "img": "src/assets/imgs/article-2.png"
     },
     {
       "type": "architecture",
       "title": "גבאי גייסה 112 מיליון מתוך 144 מיליון שקל בגיוס לסדרת אג\"ח חדשה",
       "content": "",
-      "img": "../../imgs/event-2.png"
+      "img": "src/assets/imgs/article-2.png"
     },
     {
       "type": "opinions-analysis",
       "title": "יש לי חדר משלי: כך תעצבו לנער המתבגר חדר פרקטי, עם טאצ' אישי ולא משעמם",
       "content": "",
-      "img": "../../imgs/event-2.png"
+      "img": "src/assets/imgs/article-2.png"
     }
   ],
   "vod": {
-    "img": "../../imgs/vod-img.png",
+    "img": "src/assets/imgs/vod-img.png",
     "link": ""
   }
 }

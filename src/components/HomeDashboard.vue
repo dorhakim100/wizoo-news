@@ -1,7 +1,14 @@
 <template>
   <div class="home-dashboard-container">
     <div class="event1-container"></div>
-    <div class="articles-container"></div>
+    <div class="articles-container">
+      <ArticleCard
+        v-for="(article, index) in props.articles"
+        :article="article"
+        :key="`${article.type}-${index}`"
+        :isMain="index === 0"
+      />
+    </div>
 
     <div class="event1-container"></div>
     <aside></aside>
@@ -10,6 +17,8 @@
 
 <script setup>
 import { defineProps } from 'vue'
+
+import ArticleCard from './article/ArticleCard.vue'
 
 const props = defineProps({
   articles: {
@@ -42,5 +51,19 @@ console.log(props.mostViewed)
 .home-dashboard-container {
   display: grid;
   grid-template-columns: auto 1fr;
+
+  .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    .article-card:first-of-type {
+      grid-column: 1/-1;
+      //   background-color: red;
+      img {
+        // width: 300px;
+      }
+    }
+  }
 }
 </style>
