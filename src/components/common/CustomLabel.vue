@@ -1,6 +1,7 @@
 <template>
-  <label :class="`custom-label ${getColorNameFromType(type)}`">
+  <label :class="`custom-label ${getColorNameFromType(type)} pointer`">
     <slot />
+    <LeftOutlined v-if="isArrowIcon" class="arrow-icon" />
   </label>
 </template>
 
@@ -8,14 +9,18 @@
 import { defineProps } from 'vue'
 import { getColorNameFromType } from '../../services/utils.service'
 
+import { LeftOutlined } from '@ant-design/icons-vue'
+
 const props = defineProps({
   type: {
     type: String,
     required: false,
   },
+  isArrowIcon: {
+    type: Boolean,
+    required: false,
+  },
 })
-
-console.log(props.type)
 </script>
 
 <style scoped lang="scss">
@@ -24,6 +29,15 @@ console.log(props.type)
 .custom-label {
   padding: 5px 20px;
   clip-path: polygon(10% 0, 100% 0, 100% 100%, -14% 100%);
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .arrow-icon {
+    margin-top: 3px;
+    font-size: 10px;
+  }
 
   &.green {
     background-color: $color-green;
