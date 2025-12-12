@@ -1,7 +1,7 @@
 <template>
   <div class="home-dashboard-container">
     <div class="main-container">
-      <div class="event-container event-1">
+      <div class="event-container event-1 pointer">
         <img :src="event1.img" alt="" />
       </div>
       <div class="articles-container">
@@ -13,7 +13,7 @@
         />
       </div>
 
-      <div class="event-container event-2">
+      <div class="event-container event-2 pointer">
         <img :src="event2.img" alt="" />
       </div>
     </div>
@@ -30,7 +30,7 @@
           :isMain="false"
         />
       </template>
-      <img :src="vod.img" class="vod-img" alt="vod" />
+      <img :src="vod.img" class="vod-img pointer" alt="vod" />
       <ArticleCard
         :article="props.mostViewed[props.mostViewed.length - 1]"
         :isMain="false"
@@ -81,6 +81,8 @@ console.log(props.event1)
   gap: 15px;
 
   .main-container {
+    display: grid;
+    gap: 10px;
     .event-container {
       // height: 213.5px;
       background-color: $bg-secondary;
@@ -93,7 +95,7 @@ console.log(props.event1)
     }
 
     .articles-container {
-      grid-row: 1/2;
+      grid-row: 2/3;
       grid-column: 1/2;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
