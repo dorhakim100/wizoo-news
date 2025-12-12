@@ -19,43 +19,49 @@
             class="icon-container circle pointer"
             v-for="social in socials"
             :key="social.social"
-            @click="navigateToSocioal(social.link)"
+            @click="navigateToLink(social.link)"
           >
             <img :src="social.icon" :alt="social.social" class="icon" />
           </div>
         </div>
       </div>
 
-      <nav class="lower-nav">
-        <a
-          v-for="link in lowerLinks"
-          :key="link.title"
-          :href="link.link"
-          class="nav-link"
-        >
-          {{ link.title }}
-        </a>
-      </nav>
+      <div class="lower-container">
+        <nav class="lower-nav">
+          <a
+            v-for="link in lowerLinks"
+            :key="link.title"
+            :href="link.link"
+            class="nav-link"
+          >
+            {{ link.title }}
+          </a>
+        </nav>
+        <CustomSearch v-model:searchValue="searchValue" />
+      </div>
     </div>
   </header>
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useRouter } from 'vue-router'
-import desktop from '../../public/logo-desktop.png'
+import { computed, ref, watch } from 'vue'
 
+import { navigateToLink } from '../services/utils.service'
+
+import CustomSearch from '../components/common/CustomSearch.vue'
+
+import desktop from '../../public/logo-desktop.png'
 import { links } from '../assets/jsons/app-header/header-links.json'
 import { socials } from '../assets/jsons/app-header/socials.json'
 
-const router = useRouter()
+const searchValue = ref('')
 
 const upperLinks = computed(() => links.filter((link) => link.isUpper))
 const lowerLinks = computed(() => links.filter((link) => !link.isUpper))
 
-function navigateToSocioal(link) {
-  window.open(link)
-}
+watch(searchValue, (newVal, oldVal) => {
+  console.log(newVal)
+})
 </script>
 
 <style scoped lang="scss">
@@ -113,6 +119,19 @@ function navigateToSocioal(link) {
           height: 14px;
           width: 15px;
         }
+      }
+    }
+
+    .lower-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 15px;
+
+      .lower-nav {
+        display: flex;
+        gap: 30px;
       }
     }
   }
