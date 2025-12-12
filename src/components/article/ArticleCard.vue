@@ -47,6 +47,8 @@ console.log(props.article)
 
 .article-card {
   text-align: start;
+  background-color: $bg-secondary;
+  padding: 7px;
 
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -54,9 +56,9 @@ console.log(props.article)
   height: 316px;
 
   &:not(.main) {
-    max-width: 282px;
+    // max-width: 282px;
     img {
-      max-width: 282px;
+      // max-width: 282px;
     }
   }
 
@@ -78,6 +80,7 @@ console.log(props.article)
     display: flex;
     align-items: center;
     opacity: 58%;
+    font-size: 14px;
 
     .ant-divider {
       margin-top: 3px;
