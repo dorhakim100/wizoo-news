@@ -1,52 +1,51 @@
 /* app global css */
 :root {
-  
   // Brand colors
-  --primary: #5806C7;
-  --secondary: #F6540B;
+  --primary: #5806c7;
+  --secondary: #f6540b;
 
   /* Backgrounds */
-  --bg-main: #FBF8FF; /* Light pinkish background */
-  --bg-secondary: #FFFFFF; /* Pure white lighter surface */
+  --bg-main: #fbf8ff; /* Light pinkish background */
+  --bg-secondary: #ffffff; /* Pure white lighter surface */
 
-  --dark-bg:#0B0119; /* Dark background */
-  --dark-bg-secondary:#130822; /* Dark, lighter surface */
-
+  --dark-bg: #0b0119; /* Dark background */
+  --dark-bg-secondary: #130822; /* Dark, lighter surface */
 
   /* Text Colors */
   --text-primary: #404040; /* Gray for primary text */
 
+  /* Articles Colors */
 
+  --color-gold: #e2b00d;
 
-  /* Articles Colors */ 
+  --color-green: #55ebb1;
 
-  --color-gold:#E2B00D;
+  --color-blue: #21c8fc;
 
-  --color-green:#55EBB1;
+  --color-bottle-green: #377d22;
 
-  --color-blue:#21C8FC;
+  --color-orange: #ea5619;
 
-  --color-bottle-green:#377D22;
+  --color-scarlet: #a31f1f;
 
-  --color-orange:#EA5619;
+  --color-pink: #f202d5;
 
-  --color-scarlet:#A31F1F;
-
-  --color-pink:#F202D5;
-
-
+  --merkaz-gradient: linear-gradient(
+    180deg,
+    --color-scarlet 0%,
+    --color-pink 100%
+  );
 
   --small-radius: 6px;
   --medium-radius: 8px;
 
-  --header-height-wide:114px;
-  --header-height-narrow:77px;
+  --header-height-wide: 114px;
+  --header-height-narrow: 77px;
 
-  --header-bg-color-wide:#ffff;
-  --header-bg-color-narrow:--primary;
+  --header-bg-color-wide: #ffff;
+  --header-bg-color-narrow: --primary;
 
-
-  --header-shadow: 0px 4px 69.7px 0px #5806C724;
+  --header-shadow: 0px 4px 69.7px 0px #5806c724;
 
   --narrow-screen: 900px;
   --medium-screen: 1216px;
@@ -81,22 +80,20 @@ $color-orange: var(--color-orange);
 $color-scarlet: var(--color-scarlet);
 $color-pink: var(--color-pink);
 
-
+$merkaz-gradient: var(--merkaz-gradient);
 
 // HEADER
-$header-height-wide:var(--header-height-wide);
+$header-height-wide: var(--header-height-wide);
 $header-height-narrow: var(--header-height-narrow);
 
-$header-bg-color-wide:var(--header-bg-color-wide);
-$header-bg-color-narrow:var(--header-bg-color-narrow);
+$header-bg-color-wide: var(--header-bg-color-wide);
+$header-bg-color-narrow: var(--header-bg-color-narrow);
 
-$header-shadow:var(--header-shadow);
-
-
+$header-shadow: var(--header-shadow);
 
 // LAYOUT BREAKPOINTS
 $narrow-screen: var(--narrow-screen);
 $medium-screenl: var(--medium-screen);
 $large-screen: var(--large-screen);
 
-$max-width-screen:var(--max-width-screen)
+$max-width-screen: var(--max-width-screen);

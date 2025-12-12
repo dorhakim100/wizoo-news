@@ -20,10 +20,6 @@
     @import './styles/setup/variables';
 
   
-    main{
-      margin-top: $header-height-wide;
-        background-color: #fff;
-        width: 100vw;
-    }
+
 
 </style>
