@@ -1,7 +1,7 @@
 <template>
-  <div class="writer-date-container">
+  <div class="custom-date-container">
     <slot />
-    <Divider type="vertical" />
+    <Divider type="vertical" :style="{ backgroundColor: dividerColor || '' }" />
     <span>{{ date }}</span>
   </div>
 </template>
@@ -15,11 +15,15 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  dividerColor: {
+    type: String,
+    required: false,
+  },
 })
 </script>
 
 <style scoped lang="scss">
-.writer-date-container {
+.custom-date-container {
   @import '../../styles/setup/_variables';
 
   display: flex;

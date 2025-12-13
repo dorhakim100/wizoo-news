@@ -10,6 +10,7 @@
           :key="video._id"
           :video="video"
           :isMain="index === 0"
+          :label="vodHeader"
         />
       </div>
     </div>

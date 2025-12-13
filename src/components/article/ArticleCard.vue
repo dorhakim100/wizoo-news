@@ -52,13 +52,6 @@ const props = defineProps({
 
   height: 316px;
 
-  &:not(.main) {
-    // max-width: 282px;
-    .img-container {
-      // max-height: 160px;
-    }
-  }
-
   .img-container {
     position: relative;
     img {
@@ -72,18 +65,6 @@ const props = defineProps({
       inset-inline-start: 0;
     }
   }
-
-  // .writer-date-container {
-  //   display: flex;
-  //   align-items: center;
-  //   opacity: 58%;
-  //   font-size: 14px;
-
-  //   .ant-divider {
-  //     margin-top: 3px;
-  //     background-color: $text-primary;
-  //   }
-  // }
 
   &.main {
     display: grid;

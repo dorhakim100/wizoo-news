@@ -3,8 +3,15 @@
     <div class="thumbnail-container">
       <img :src="video.thumbnail" alt="" class="ar-278-160" />
       <CustomPlay class="center-absolute" />
+      <CustomLabel :is-gradient="true" v-if="label">{{ label }}</CustomLabel>
     </div>
-    <h3>{{ video.title }}</h3>
+    <div class="text-container">
+      <h3 class="wrap-ellipsis">{{ video.title }}</h3>
+      <p class="wrap-ellipsis" v-if="isMain">{{ video.content }}</p>
+      <CustomDate :date="video.date" :divider-color="'white'">{{
+        label
+      }}</CustomDate>
+    </div>
   </div>
 </template>
 
@@ -12,6 +19,8 @@
 import { defineProps } from 'vue'
 
 import CustomPlay from '../common/CustomPlay.vue'
+import CustomDate from '../common/CustomDate.vue'
+import CustomLabel from '../common/CustomLabel.vue'
 
 const props = defineProps({
   video: {
@@ -20,6 +29,10 @@ const props = defineProps({
   },
   isMain: {
     type: Boolean,
+    required: false,
+  },
+  label: {
+    type: String,
     required: false,
   },
 })
@@ -32,10 +45,13 @@ console.log(props.video)
 
 .video-card-container {
   background-color: $video-card-bg;
-  padding: 5px;
+  padding: 8px;
+  text-align: start;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  gap: 1em;
 
   &.main {
     grid-template-columns: 1fr;
@@ -48,6 +64,17 @@ console.log(props.video)
       .icon-container {
         font-size: 1.6em;
       }
+    }
+
+    .custom-date-container {
+      grid-row: 1/2;
+    }
+
+    h3 {
+      font-size: 32px;
+    }
+    .custom-date-container {
+      font-size: 18px;
     }
   }
 
@@ -66,6 +93,25 @@ console.log(props.video)
     img {
       width: 100%;
     }
+
+    .custom-label {
+      position: absolute;
+      bottom: 6px;
+      z-index: 3;
+      padding-right: 3.5em;
+      padding-left: 3.5em;
+    }
+  }
+  .text-container {
+    margin-bottom: 6px;
+    align-self: end;
+    display: grid;
+    gap: 1em;
+  }
+
+  h3,
+  p {
+    font-size: 18px;
   }
 }
 </style>
