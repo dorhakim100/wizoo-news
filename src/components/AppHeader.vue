@@ -179,9 +179,6 @@ const navigateToHome = () => {
         justify-content: space-between;
         width: 100%;
         max-width: 960px;
-        // margin-inline-end: 200px;
-
-        // gap: 34px;
       }
 
       .socials-container {

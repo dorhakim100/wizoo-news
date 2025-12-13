@@ -43,7 +43,6 @@ const props = defineProps({
     width: 100vw;
     display: none;
   }
-  // margin: 0 auto;
   .podcasts-container {
     width: 100vw;
     grid-template-columns: 1fr;
