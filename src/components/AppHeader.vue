@@ -6,11 +6,13 @@
   >
     <img
       :src="`${isMobile ? mobile : desktop}`"
-      :class="`${!isTop0 ? 'hide' : ''}`"
+      :class="`${!isTop0 && !isMobile ? 'hide' : ''}`"
       alt=""
     />
     <div
-      :class="`basic-logo-container pointer ${!isTop0 ? 'scrolled' : ''}`"
+      :class="`basic-logo-container pointer ${
+        !isTop0 && !isMobile ? 'scrolled' : ''
+      }`"
       @click="navigateToHome()"
     >
       <MerkazBasicLogo class="basic-logo" />
@@ -136,6 +138,10 @@ const navigateToHome = () => {
   transition: 0.3s ease;
   transition: background-color 0s;
 
+  @media (max-width: 1216px) {
+    font-size: 0.8em;
+  }
+
   img {
     padding: 1.4em;
     transition: 0.3s ease;
@@ -166,10 +172,16 @@ const navigateToHome = () => {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1em;
 
       .upper-nav {
         display: flex;
-        gap: 34px;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 960px;
+        // margin-inline-end: 200px;
+
+        // gap: 34px;
       }
 
       .socials-container {
