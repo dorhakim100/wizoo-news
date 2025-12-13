@@ -49,6 +49,7 @@ const props = defineProps({
 
   display: grid;
   grid-template-rows: auto 1fr auto;
+  gap: 7px;
 
   .img-container {
     position: relative;

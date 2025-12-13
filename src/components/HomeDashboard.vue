@@ -99,7 +99,7 @@ const props = defineProps({
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, auto);
       gap: 15px;
-      align-items: start;
+      // align-items: start;
 
       .article-card.main {
         grid-column: 1/-1;
@@ -120,7 +120,7 @@ const props = defineProps({
 
   .side-articles-container {
     display: grid;
-    // grid-template-rows: ;
+    gap: 1em;
 
     h4 {
       font-size: 1.5em;
