@@ -19,8 +19,7 @@ body {
   }
 
   main {
-    max-width: $max-width-screen;
-    width: 100vw;
+    // width: 100vw;
 
     min-height: 100vh;
 
@@ -29,7 +28,16 @@ body {
     justify-items: center;
 
     .page-container {
-      width: $max-width-screen;
+      // width: $max-width-screen;
+
+      width: 100%;
+      > div:not(.full-width) {
+        max-width: $max-width-screen;
+        margin: 0 auto;
+      }
+      .full-width {
+        width: calc(100vw - 15px) !important;
+      }
       margin: 81px auto;
     }
   }

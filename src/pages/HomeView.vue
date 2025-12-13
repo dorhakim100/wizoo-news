@@ -7,13 +7,19 @@
       :event2="event2"
       :vod="vod"
     />
-    <div v-for="(object, index) in types" :key="object.type">
+
+    <div
+      v-for="(object, index) in types"
+      :key="object.type"
+      class="articles-event-container"
+    >
       <ArticlesType
         :type="object.type"
         :articles="articles.filter((article) => article.type === object.type)"
       />
       <img :src="event1.img" alt="event" v-if="(index - 1) % 2 === 0" />
     </div>
+    <div class="vod-container full-width"></div>
   </div>
 </template>
 
@@ -21,11 +27,12 @@
 import { computed } from 'vue'
 
 import { getArrayOfNumbers, getRandomInt } from '../services/utils.service'
+import { types } from '../config/article-types'
 import dashboardJson from '../assets/jsons/home-dashboard/home-dashboard.json'
 
 import HomeDashboard from '../components/HomeDashboard.vue'
 import ArticlesType from '../components/article/ArticlesType.vue'
-import { types } from '../config/article-types'
+import VodDashboard from '../components/vod/VodDashboard.vue'
 
 const { articles, event1, event2, vod } = dashboardJson
 
@@ -42,4 +49,10 @@ const mostViewed = computed(() =>
 )
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.vod-container {
+  height: 300px;
+  width: 100%;
+  background-color: black;
+}
+</style>
