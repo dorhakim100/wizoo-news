@@ -3,6 +3,13 @@
     <slot />
     <Divider type="vertical" :style="{ backgroundColor: dividerColor || '' }" />
     <span>{{ date }}</span>
+    <template v-if="afterValue">
+      <Divider
+        type="vertical"
+        :style="{ backgroundColor: dividerColor || '' }"
+      />
+      <span>{{ afterValue }}</span>
+    </template>
   </div>
 </template>
 
@@ -14,6 +21,10 @@ const props = defineProps({
   date: {
     type: String,
     required: true,
+  },
+  afterValue: {
+    type: String,
+    required: false,
   },
   dividerColor: {
     type: String,
