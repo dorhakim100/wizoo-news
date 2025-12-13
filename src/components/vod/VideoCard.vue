@@ -1,6 +1,6 @@
 <template>
-  <div :class="`video-card-container ${isMain ? 'main' : ''} pointer`">
-    <div class="thumbnail-container">
+  <div :class="`video-card-container ${isMain ? 'main' : ''} pointer grow`">
+    <div class="img-container">
       <img :src="video.thumbnail" alt="" class="ar-278-160" />
       <CustomPlay class="center-absolute" />
       <CustomLabel :is-gradient="true" v-if="label">{{ label }}</CustomLabel>
@@ -55,7 +55,7 @@ console.log(props.video)
 
   &.main {
     grid-template-columns: 1fr;
-    .thumbnail-container {
+    .img-container {
       grid-column: 1/-1;
       img {
         max-width: none;
@@ -78,7 +78,7 @@ console.log(props.video)
     }
   }
 
-  .thumbnail-container {
+  .img-container {
     position: relative;
     height: fit-content;
     &::after {

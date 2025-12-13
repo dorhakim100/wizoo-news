@@ -57,6 +57,7 @@ const minArray = computed(() => {
   .articles-container {
     display: flex;
     justify-content: space-between;
+    gap: 1em;
   }
 }
 </style>

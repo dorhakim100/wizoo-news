@@ -1,5 +1,5 @@
 <template>
-  <article :class="`article-card ${isMain ? 'main' : ''} pointer`">
+  <article :class="`article-card ${isMain ? 'main' : ''} pointer grow`">
     <div class="img-container">
       <img :src="article.img" :alt="article.type" class="ar-278-160" />
       <CustomLabel :color="articleService.getColorNameFromType(article.type)">
@@ -50,8 +50,6 @@ const props = defineProps({
   display: grid;
   grid-template-rows: auto 1fr auto;
 
-  height: 316px;
-
   .img-container {
     position: relative;
     img {
@@ -64,6 +62,10 @@ const props = defineProps({
       bottom: 0;
       inset-inline-start: 0;
     }
+  }
+
+  h3 {
+    margin-bottom: 69px;
   }
 
   &.main {
@@ -80,7 +82,7 @@ const props = defineProps({
       }
     }
 
-    .writer-date-container {
+    .custom-date-container {
       grid-row: 1/2;
     }
 
