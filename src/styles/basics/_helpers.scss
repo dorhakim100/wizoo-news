@@ -40,3 +40,15 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.ar-278-160 {
+  aspect-ratio: 278 / 160;
+  width: 100%;
+}
+
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

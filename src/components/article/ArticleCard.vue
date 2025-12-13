@@ -1,7 +1,7 @@
 <template>
   <article :class="`article-card ${isMain ? 'main' : ''} pointer`">
     <div class="img-container">
-      <img :src="article.img" :alt="article.type" />
+      <img :src="article.img" :alt="article.type" class="ar-278-160" />
       <CustomLabel :color="articleService.getColorNameFromType(article.type)">
         {{ articleService.getHebrewType(article.type) }}
       </CustomLabel>
@@ -55,9 +55,9 @@ const props = defineProps({
   height: 316px;
 
   &:not(.main) {
-    max-width: 282px;
+    // max-width: 282px;
     .img-container {
-      max-height: 160px;
+      // max-height: 160px;
     }
   }
 
@@ -65,7 +65,7 @@ const props = defineProps({
     position: relative;
     img {
       object-fit: cover;
-      width: 100%;
+      // width: 100%;
       height: 100%;
     }
     .custom-label {

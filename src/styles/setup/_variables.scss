@@ -47,6 +47,12 @@
   --header-shadow: 0px 4px 69.7px 0px #5806c724;
 
   --vod-bg-color: #0b0119;
+  --video-card-bg: #130822;
+
+  --thumbnail-shadow: #0b01195c;
+
+  --white-background: #ffffff;
+  --pale-white-background: #ffffff66;
 
   --narrow-screen-number: 600;
   --narrow-screen: 600px;
@@ -98,6 +104,11 @@ $header-shadow: var(--header-shadow);
 
 // VOD
 $vod-bg-color: var(--vod-bg-color);
+$video-card-bg: var(--video-card-bg);
+$thumbnail-shadow: var(--thumbnail-shadow);
+
+$white-background: var(--white-background);
+$pale-white-background: var(--pale-white-background);
 
 // LAYOUT BREAKPOINTS
 $narrow-screen: var(--narrow-screen);

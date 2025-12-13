@@ -4,6 +4,14 @@
       <CustomHeader :isGradient="true" :color="'white'">{{
         vodHeader
       }}</CustomHeader>
+      <div class="videos-container">
+        <VideoCard
+          v-for="(video, index) in props.videos"
+          :key="video._id"
+          :video="video"
+          :isMain="index === 0"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -12,7 +20,7 @@
 import { defineProps } from 'vue'
 
 import CustomHeader from '../common/CustomHeader.vue'
-import videoCard from '../vod/VideoCard.vue'
+import VideoCard from '../vod/VideoCard.vue'
 
 const props = defineProps({
   vodHeader: {
@@ -31,13 +39,23 @@ const props = defineProps({
 
 .vod-container {
   background-color: $vod-bg-color;
-  height: 400px;
+
   color: $text-white;
 
   .content-container {
-    padding: 7em 0;
+    padding: 5em 12px 7em 12px;
     margin: 0 auto;
     max-width: $max-width-screen;
+
+    .videos-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 15px;
+      .video-card-container:first-child {
+        grid-row: 1/-1;
+      }
+    }
   }
 }
 </style>
