@@ -19,7 +19,7 @@
       />
       <img :src="event1.img" alt="event" v-if="(index - 1) % 2 === 0" />
     </div>
-    <div class="vod-container full-width"></div>
+    <VodDashboard />
   </div>
 </template>
 
@@ -49,10 +49,4 @@ const mostViewed = computed(() =>
 )
 </script>
 
-<style scoped lang="scss">
-.vod-container {
-  height: 300px;
-  width: 100%;
-  background-color: black;
-}
-</style>
+<style scoped lang="scss"></style>

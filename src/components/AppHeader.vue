@@ -32,7 +32,7 @@
           <div
             class="icon-container circle pointer"
             v-for="social in socials"
-            :key="social.social"
+            :key="`${social.social}-header`"
             @click="navigateToLink(social.link)"
           >
             <img :src="social.icon" :alt="social.social" class="icon" />

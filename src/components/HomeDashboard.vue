@@ -8,7 +8,7 @@
         <ArticleCard
           v-for="(article, index) in props.articles"
           :article="article"
-          :key="`${article.type}-${index}`"
+          :key="`${article.type}-${article._id}`"
           :isMain="index === 0"
         />
       </div>
@@ -22,7 +22,7 @@
       <h4>הכתבות הנצפות ביותר</h4>
       <template
         v-for="(article, index) in props.mostViewed"
-        :key="`${article.type}-${index}`"
+        :key="`most-${article.type}-${article.id}`"
       >
         <ArticleCard
           v-if="index !== props.mostViewed.length - 1"
