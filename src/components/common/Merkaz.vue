@@ -88,6 +88,11 @@ const props = defineProps({
         fill: $color-pink;
       }
     }
+    &.black {
+      :deep(path) {
+        fill: $text-primary;
+      }
+    }
   }
 }
 </style>

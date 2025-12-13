@@ -7,7 +7,7 @@
       "title": "מייסד ובעלים של דן הלפרט משרד עו\"ד",
       "date": "2024-09-18",
       "content": "\"מכיר המון יזמים עם שואו ומצגות יפות, ואחרי שנה אתה רואה שזה הכל בלון שמתפוצץ\"",
-      "thumbnail": "src/assets/imgs/podcast1.png"
+      "img": "src/assets/imgs/podcast1.png"
     },
 
     {
@@ -16,7 +16,7 @@
       "title": "ראש הרשות לרישום והסדר זכויות מקרקעין",
       "date": "2024-09-18",
       "content": "\"המעבר לרישום מקוון מונע את האפשרות למרמה וזיופים, או לפחות מקשה מאוד\"",
-      "thumbnail": "src/assets/imgs/podcast2.png"
+      "img": "src/assets/imgs/podcast2.png"
     },
     {
       "id": "p3",
@@ -24,7 +24,7 @@
       "title": "ראש הרשות לרישום והסדר זכויות מקרקעין",
       "date": "2024-09-18",
       "content": "\"המעבר לרישום מקוון מונע את האפשרות למרמה וזיופים, או לפחות מקשה מאוד\"",
-      "thumbnail": "src/assets/imgs/podcast2.png"
+      "img": "src/assets/imgs/podcast2.png"
     },
 
     {
@@ -33,7 +33,7 @@
       "title": "מייסד שותף קרן יסודות",
       "date": "2024-09-18",
       "content": "\"היה לנו רעיון לאפליקציה שתאסוף כסף מחברים. בנינו ותכנתנו, אבל ויתרנו. אחרי שנתיים קמו ביט ופיי בוקס\"",
-      "thumbnail": "src/assets/imgs/podcast4.png"
+      "img": "src/assets/imgs/podcast4.png"
     }
   ]
 }

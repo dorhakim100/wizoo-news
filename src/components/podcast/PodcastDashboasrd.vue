@@ -1,10 +1,12 @@
 <template>
   <CustomHeader :is-gradient="true" :color="'black'">{{ header }}</CustomHeader>
-  <PodcastCard
-    v-for="podcast in props.podcasts"
-    :podcast="podcast"
-    :key="podcast._id"
-  />
+  <div class="podcasts-container">
+    <PodcastCard
+      v-for="podcast in props.podcasts"
+      :podcast="podcast"
+      :key="podcast._id"
+    />
+  </div>
 </template>
 
 <script setup>
@@ -29,5 +31,11 @@ const props = defineProps({
 .custom-header-container {
   margin-top: 2em !important;
   margin-bottom: 2em !important;
+}
+
+.podcasts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 </style>
