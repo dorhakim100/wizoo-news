@@ -54,6 +54,8 @@
   --white-background: #ffffff;
   --pale-white-background: #ffffff66;
 
+  --footer-logo-container-bg: #fbf8ff;
+
   --narrow-screen-number: 600;
   --narrow-screen: 600px;
   --medium-screen: 1216px;
@@ -109,6 +111,8 @@ $thumbnail-shadow: var(--thumbnail-shadow);
 
 $white-background: var(--white-background);
 $pale-white-background: var(--pale-white-background);
+
+$footer-logo-container-bg: var(--footer-logo-container-bg);
 
 // LAYOUT BREAKPOINTS
 $narrow-screen: var(--narrow-screen);
