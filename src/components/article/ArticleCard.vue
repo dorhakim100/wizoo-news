@@ -12,11 +12,10 @@
       </h3>
       <p class="wrap-ellipsis" v-if="isMain">{{ article.content }}</p>
     </div>
-    <div class="writer-date-container">
-      <span>{{ article.writer }}</span>
-      <Divider type="vertical" />
-      <span>{{ article.date }}</span>
-    </div>
+
+    <CustomDate :date="article.date">
+      {{ article.writer }}
+    </CustomDate>
   </article>
 </template>
 
@@ -26,8 +25,7 @@ import { defineProps } from 'vue'
 import { articleService } from '../../services/article/article.service'
 
 import CustomLabel from '../common/CustomLabel.vue'
-
-import { Divider } from 'ant-design-vue'
+import CustomDate from '../common/CustomDate.vue'
 
 const props = defineProps({
   article: {
@@ -75,17 +73,17 @@ const props = defineProps({
     }
   }
 
-  .writer-date-container {
-    display: flex;
-    align-items: center;
-    opacity: 58%;
-    font-size: 14px;
+  // .writer-date-container {
+  //   display: flex;
+  //   align-items: center;
+  //   opacity: 58%;
+  //   font-size: 14px;
 
-    .ant-divider {
-      margin-top: 3px;
-      background-color: $text-primary;
-    }
-  }
+  //   .ant-divider {
+  //     margin-top: 3px;
+  //     background-color: $text-primary;
+  //   }
+  // }
 
   &.main {
     display: grid;

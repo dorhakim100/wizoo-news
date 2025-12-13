@@ -14,8 +14,7 @@ import { CaretRightOutlined, PlayCircleFilled } from '@ant-design/icons-vue'
 
 .icon-container {
   opacity: 100%;
-  //   width: 3.3em;
-  //   height: 3.3em;
+
   background-color: $pale-white-background;
   padding: 0.6em;
 
@@ -26,7 +25,6 @@ import { CaretRightOutlined, PlayCircleFilled } from '@ant-design/icons-vue'
 }
 
 .play-icon {
-  margin-left: 3px;
   min-width: 20px;
   min-height: 20px;
 

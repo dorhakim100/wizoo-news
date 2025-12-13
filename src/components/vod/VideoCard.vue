@@ -1,5 +1,5 @@
 <template>
-  <div :class="`video-card-container ${isMain ? 'main' : ''}`">
+  <div :class="`video-card-container ${isMain ? 'main' : ''} pointer`">
     <div class="thumbnail-container">
       <img :src="video.thumbnail" alt="" class="ar-278-160" />
       <CustomPlay class="center-absolute" />
