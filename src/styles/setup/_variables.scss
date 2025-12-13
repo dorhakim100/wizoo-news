@@ -56,6 +56,8 @@
 
   --footer-logo-container-bg: #fbf8ff;
 
+  --trademarks-bg: #130822;
+
   --narrow-screen-number: 600;
   --narrow-screen: 600px;
   --medium-screen: 1216px;
@@ -113,6 +115,7 @@ $white-background: var(--white-background);
 $pale-white-background: var(--pale-white-background);
 
 $footer-logo-container-bg: var(--footer-logo-container-bg);
+$trademarks-bg: var(--trademarks-bg);
 
 // LAYOUT BREAKPOINTS
 $narrow-screen: var(--narrow-screen);

@@ -36,6 +36,7 @@
         </div>
       </div>
     </div>
+    <TradeMarks />
   </footer>
 </template>
 
@@ -51,6 +52,8 @@ import XIcon from '../assets/icons/socials-links/x.svg'
 import YouTube from '../assets/icons/socials-links/youtube.svg'
 
 import ArrowDown from '../assets/icons/arrow-down.svg'
+
+import TradeMarks from '../components/common/TradeMarks.vue'
 
 const socials = [
   { name: 'facebook', icon: Facebook },
