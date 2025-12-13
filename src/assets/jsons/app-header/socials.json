@@ -2,37 +2,37 @@
   "socials": [
     {
       "social": "instagram",
-      "icon": "src/assets/icons/socials-links/instagram.svg",
+      "icon": "/socials-links/instagram.svg",
       "link": "https://www.instagram.com/nadlancenter.co.il/?utm_source=site"
     },
     {
       "social": "linkedin",
-      "icon": "src/assets/icons/socials-links/linkedin.svg",
+      "icon": "/socials-links/linkedin.svg",
       "link": "https://www.linkedin.com/showcase/%D7%A0%D7%93%D7%9C-%D7%9F-%D7%91%D7%A8%D7%90%D7%A9-%D7%A6%D7%A2%D7%99%D7%A8-%D7%9E%D7%91%D7%99%D7%AA-%D7%9E%D7%A8%D7%9B%D7%96-%D7%94%D7%A0%D7%93%D7%9C-%D7%9F/about/"
     },
     {
       "social": "facebook",
-      "icon": "src/assets/icons/socials-links/facebook.svg",
+      "icon": "/socials-links/facebook.svg",
       "link": "https://www.facebook.com/merkazhanadlan/?utm_source=site"
     },
     {
       "social": "tik-tok",
-      "icon": "src/assets/icons/socials-links/tik-tok.svg",
+      "icon": "/socials-links/tik-tok.svg",
       "link": "https://www.tiktok.com/@nadlan_center?_t=8ihQ3oK3mq1&_r=1"
     },
     {
       "social": "whatsapp",
-      "icon": "src/assets/icons/socials-links/whatsapp.svg",
+      "icon": "/socials-links/whatsapp.svg",
       "link": "https://chat.whatsapp.com/CFhqV6KTR5rIDQCSD2VnyI"
     },
     {
       "social": "x",
-      "icon": "src/assets/icons/socials-links/x.svg",
+      "icon": "/socials-links/x.svg",
       "link": "https://x.com/mhndln/?utm_source=site"
     },
     {
       "social": "youtube",
-      "icon": "src/assets/icons/socials-links/youtube.svg",
+      "icon": "/socials-links/youtube.svg",
       "link": "https://www.youtube.com/@Nadlancente"
     }
   ]

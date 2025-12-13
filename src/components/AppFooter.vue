@@ -43,13 +43,13 @@
 <script setup>
 import logo from '../../public/logo-desktop.png'
 
-import Facebook from '../assets/icons/socials-links/facebook.svg'
-import Instagram from '../assets/icons/socials-links/instagram.svg'
-import LinkedIn from '../assets/icons/socials-links/linkedin.svg'
-import TikTok from '../assets/icons/socials-links/tik-tok.svg'
-import WhatsApp from '../assets/icons/socials-links/whatsapp.svg'
-import XIcon from '../assets/icons/socials-links/x.svg'
-import YouTube from '../assets/icons/socials-links/youtube.svg'
+import Facebook from '../../public/socials-links/facebook.svg'
+import Instagram from '../../public/socials-links/instagram.svg'
+import LinkedIn from '../../public/socials-links/linkedin.svg'
+import TikTok from '../../public/socials-links/tik-tok.svg'
+import WhatsApp from '../../public/socials-links/whatsapp.svg'
+import XIcon from '../../public/socials-links/x.svg'
+import YouTube from '../../public/socials-links/youtube.svg'
 
 import ArrowDown from '../assets/icons/arrow-down.svg'
 
