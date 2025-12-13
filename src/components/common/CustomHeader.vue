@@ -1,14 +1,17 @@
 <template>
   <div :class="`type-header-container ${color}`">
     <div class="title-container">
-      <Merkaz :lower-color="color" />
+      <Merkaz :lower-color="color" :isUpperGradient="isGradient" />
       <h5>
         <slot />
       </h5>
     </div>
-    <CustomLabel :type="type" :is-arrow-icon="true">{{
-      typeHeaderJson.label
-    }}</CustomLabel>
+    <CustomLabel
+      :color="color"
+      :is-arrow-icon="true"
+      :isGradient="isGradient"
+      >{{ typeHeaderJson.label }}</CustomLabel
+    >
   </div>
 </template>
 
@@ -18,16 +21,17 @@ import CustomLabel from '../common/CustomLabel.vue'
 import Merkaz from '../common/Merkaz.vue'
 
 import typeHeaderJson from '../../assets/jsons/type-header/type-header.json'
-import { getColorNameFromType } from '../../services/utils.service'
 
 const props = defineProps({
-  type: {
+  color: {
     type: String,
     required: true,
   },
+  isGradient: {
+    type: Boolean,
+    required: false,
+  },
 })
-
-const color = getColorNameFromType(props.type)
 </script>
 
 <style scoped lang="scss">

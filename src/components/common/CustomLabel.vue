@@ -1,5 +1,7 @@
 <template>
-  <label :class="`custom-label ${getColorNameFromType(type)} pointer`">
+  <label
+    :class="`custom-label ${color} pointer ${isGradient ? 'gradient' : ''}`"
+  >
     <slot />
     <LeftOutlined v-if="isArrowIcon" class="arrow-icon" />
   </label>
@@ -7,16 +9,19 @@
 
 <script setup>
 import { defineProps } from 'vue'
-import { getColorNameFromType } from '../../services/utils.service'
 
 import { LeftOutlined } from '@ant-design/icons-vue'
 
 const props = defineProps({
-  type: {
+  color: {
     type: String,
     required: false,
   },
   isArrowIcon: {
+    type: Boolean,
+    required: false,
+  },
+  isGradient: {
     type: Boolean,
     required: false,
   },
@@ -66,6 +71,11 @@ const props = defineProps({
   }
   &.gray {
     background-color: gray;
+  }
+
+  &.gradient {
+    color: $text-white;
+    background: $merkaz-gradient;
   }
 }
 </style>

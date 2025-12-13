@@ -19,7 +19,7 @@
       />
       <img :src="event1.img" alt="event" v-if="(index - 1) % 2 === 0" />
     </div>
-    <VodDashboard />
+    <VodDashboard :vodHeader="vodHeader" :videos="videos" />
   </div>
 </template>
 
@@ -29,12 +29,14 @@ import { computed } from 'vue'
 import { getArrayOfNumbers, getRandomInt } from '../services/utils.service'
 import { types } from '../config/article-types'
 import dashboardJson from '../assets/jsons/home-dashboard/home-dashboard.json'
+import vodDashboardJson from '../assets/jsons/vod-dashboard/vod-dashboard.json'
 
 import HomeDashboard from '../components/HomeDashboard.vue'
 import ArticlesType from '../components/article/ArticlesType.vue'
 import VodDashboard from '../components/vod/VodDashboard.vue'
 
 const { articles, event1, event2, vod } = dashboardJson
+const { vodHeader, videos } = vodDashboardJson
 
 const dashboardArticles = computed(() => {
   return getArrayOfNumbers(0, 6).map(() => {

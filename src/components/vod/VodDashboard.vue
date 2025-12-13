@@ -1,13 +1,26 @@
 <template>
   <div class="vod-container full-width">
     <div class="content-container">
-      <CustomHeader>bla</CustomHeader>
+      <CustomHeader :isGradient="true">{{ vodHeader }}</CustomHeader>
     </div>
   </div>
 </template>
 
 <script setup>
+import { defineProps } from 'vue'
+
 import CustomHeader from '../common/CustomHeader.vue'
+
+const props = defineProps({
+  vodHeader: {
+    type: String,
+    required: true,
+  },
+  videos: {
+    type: Array,
+    required: true,
+  },
+})
 </script>
 
 <style scoped lang="scss">

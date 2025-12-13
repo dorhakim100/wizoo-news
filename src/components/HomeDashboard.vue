@@ -48,11 +48,11 @@ import ArticleCard from './article/ArticleCard.vue'
 
 const props = defineProps({
   articles: {
-    type: Object,
+    type: Array,
     required: false,
   },
   mostViewed: {
-    type: Object,
+    type: Array,
     required: false,
   },
   event1: {

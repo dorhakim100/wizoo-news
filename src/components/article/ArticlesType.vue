@@ -1,6 +1,6 @@
 <template>
   <div class="articles-type-container">
-    <CustomHeader :type="type">{{
+    <CustomHeader :color="articleService.getColorNameFromType(type)">{{
       articleService.getHebrewType(type)
     }}</CustomHeader>
     <div class="articles-container">
@@ -47,8 +47,6 @@ const minArray = computed(() => {
         () => props.articles[getRandomInt(0, props.articles.length - 1)]
       )
 })
-
-console.log(minArray.value)
 </script>
 
 <style scoped lang="scss">

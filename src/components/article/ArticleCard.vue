@@ -2,7 +2,7 @@
   <article :class="`article-card ${isMain ? 'main' : ''} pointer`">
     <div class="img-container">
       <img :src="article.img" :alt="article.type" />
-      <CustomLabel :type="article.type">
+      <CustomLabel :color="articleService.getColorNameFromType(article.type)">
         {{ articleService.getHebrewType(article.type) }}
       </CustomLabel>
     </div>
@@ -39,7 +39,6 @@ const props = defineProps({
     required: true,
   },
 })
-console.log(props.article)
 </script>
 
 <style scoped lang="scss">
