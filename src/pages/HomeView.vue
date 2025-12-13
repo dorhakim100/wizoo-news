@@ -8,18 +8,21 @@
       :vod="vod"
     />
 
-    <div
-      v-for="(object, index) in types"
-      :key="object.type"
-      class="articles-event-container"
-    >
-      <ArticlesType
-        :type="object.type"
-        :articles="articles.filter((article) => article.type === object.type)"
-      />
-      <img :src="event1.img" alt="event" v-if="(index - 1) % 2 === 0" />
+    <div class="types-container">
+      <div
+        v-for="(object, index) in types"
+        :key="object.type"
+        class="articles-event-container"
+      >
+        <ArticlesType
+          :type="object.type"
+          :articles="articles.filter((article) => article.type === object.type)"
+        />
+        <img :src="event1.img" alt="event" v-if="(index - 1) % 2 === 0" />
+      </div>
     </div>
     <VodDashboard :vodHeader="vodHeader" :videos="videos" />
+    <PodcastDashboard :header="podcastHeader" :podcasts="podcasts" />
   </div>
 </template>
 
@@ -39,6 +42,7 @@ import PodcastDashboard from '../components/podcast/PodcastDashboasrd.vue'
 
 const { articles, event1, event2, vod } = dashboardJson
 const { vodHeader, videos } = vodDashboardJson
+const { podcastHeader, podcasts } = podcastDashboardJson
 
 const dashboardArticles = computed(() => {
   return getArrayOfNumbers(0, 6).map(() => {
@@ -53,4 +57,13 @@ const mostViewed = computed(() =>
 )
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.page-container {
+  // display: grid;
+  // gap: 5.0625em;
+  & > div {
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+}
+</style>

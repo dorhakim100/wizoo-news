@@ -1,5 +1,5 @@
 <template>
-  <div :class="`type-header-container ${color}`">
+  <div :class="`custom-header-container ${color}`">
     <div class="title-container">
       <Merkaz :lower-color="color" :isUpperGradient="isGradient" />
       <h5>
@@ -37,7 +37,7 @@ const props = defineProps({
 <style scoped lang="scss">
 @import '../../styles/setup/_variables';
 
-.type-header-container {
+.custom-header-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -99,6 +99,11 @@ const props = defineProps({
   &.white {
     &::after {
       background-color: $text-white;
+    }
+  }
+  &.black {
+    &::after {
+      background-color: $text-primary;
     }
   }
 
