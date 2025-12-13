@@ -1,8 +1,8 @@
 <template>
   <div class="articles-type-container">
-    <TypeHeader :type="type">{{
+    <CustomHeader :type="type">{{
       articleService.getHebrewType(type)
-    }}</TypeHeader>
+    }}</CustomHeader>
     <div class="articles-container">
       <ArticleCard
         v-for="article in minArray"
@@ -19,7 +19,7 @@ import { computed, defineProps } from 'vue'
 
 import { articleService } from '../../services/article/article.service'
 
-import TypeHeader from './TypeHeader.vue'
+import CustomHeader from '../common/CustomHeader.vue'
 import ArticleCard from './ArticleCard.vue'
 import {
   getArrayOfNumbers,

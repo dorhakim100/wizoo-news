@@ -7,12 +7,13 @@
       :event2="event2"
       :vod="vod"
     />
-    <ArticlesType
-      v-for="object in types"
-      :type="object.type"
-      :key="object.type"
-      :articles="articles.filter((article) => article.type === object.type)"
-    />
+    <div v-for="(object, index) in types" :key="object.type">
+      <ArticlesType
+        :type="object.type"
+        :articles="articles.filter((article) => article.type === object.type)"
+      />
+      <img :src="event1.img" alt="event" v-if="(index - 1) % 2 === 0" />
+    </div>
   </div>
 </template>
 
