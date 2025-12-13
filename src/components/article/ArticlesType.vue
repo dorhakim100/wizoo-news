@@ -59,5 +59,14 @@ const minArray = computed(() => {
     justify-content: space-between;
     gap: 1em;
   }
+
+  @media (max-width: 1216px) {
+    max-width: 100vw;
+    margin: 0 auto;
+
+    .articles-container {
+      display: grid;
+    }
+  }
 }
 </style>

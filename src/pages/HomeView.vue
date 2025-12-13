@@ -18,7 +18,12 @@
           :type="object.type"
           :articles="articles.filter((article) => article.type === object.type)"
         />
-        <img :src="event1.img" alt="event" v-if="(index - 1) % 2 === 0" />
+        <img
+          :src="event1.img"
+          alt="event"
+          class="event-img"
+          v-if="(index - 1) % 2 === 0"
+        />
       </div>
     </div>
     <VodDashboard :vodHeader="vodHeader" :videos="videos" />
@@ -62,6 +67,11 @@ const mostViewed = computed(() =>
   & > div {
     margin-top: 5em;
     margin-bottom: 5em;
+  }
+  @media (max-width: 1216px) {
+    .event-img {
+      display: none;
+    }
   }
 }
 </style>

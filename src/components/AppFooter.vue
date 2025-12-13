@@ -78,6 +78,10 @@ footer {
   color: $text-white;
   text-align: start;
 
+  @media (max-width: 600px) {
+    display: none;
+  }
+
   .content-container {
     position: relative;
     width: 100%;
@@ -85,6 +89,10 @@ footer {
     padding: 120px 0 60px;
 
     margin: 0 auto;
+
+    @media (max-width: 1216px) {
+      padding: 120px 10px 60px;
+    }
 
     .logo-container {
       position: absolute;

@@ -131,5 +131,17 @@ const props = defineProps({
       padding: 7px;
     }
   }
+
+  @media (max-width: 1216px) {
+    .main-container {
+      justify-self: center;
+      grid-column: 1/-1;
+      max-width: 100vw;
+    }
+    .side-articles-container,
+    .ant-divider {
+      display: none;
+    }
+  }
 }
 </style>

@@ -38,4 +38,16 @@ const props = defineProps({
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+@media (max-width: 1216px) {
+  .custom-header-container {
+    width: 100vw;
+    display: none;
+  }
+  // margin: 0 auto;
+  .podcasts-container {
+    width: 100vw;
+    grid-template-columns: 1fr;
+    display: none;
+  }
+}
 </style>

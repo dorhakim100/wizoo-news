@@ -25,6 +25,10 @@ body {
     margin-top: $header-height-wide;
     display: grid;
     justify-items: center;
+    @media (max-width: 1216px) {
+      // max-width: 100vw;
+      // margin: 0 auto;
+    }
 
     .page-container {
       width: 100%;
@@ -36,6 +40,10 @@ body {
         width: calc(100vw - 15px) !important;
       }
       margin: 81px auto;
+      @media (max-width: 1216px) {
+        // max-width: 100vw;
+        // margin: 0 auto;
+      }
     }
   }
 }
