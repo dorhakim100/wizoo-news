@@ -66,7 +66,6 @@ const socials = [
 ]
 
 import linksJson from '../assets/jsons/app-footer/footer-links.json'
-console.log(linksJson)
 const { links } = linksJson
 </script>
 

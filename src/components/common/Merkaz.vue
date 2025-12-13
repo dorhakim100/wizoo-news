@@ -26,7 +26,7 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
-@import '../../styles//setup/variables';
+@import '../../styles/setup/variables';
 
 .merkaz-container {
   position: relative;

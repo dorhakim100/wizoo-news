@@ -82,12 +82,10 @@ const props = defineProps({
     display: grid;
     gap: 10px;
     .event-container {
-      // height: 213.5px;
       background-color: $bg-secondary;
       padding: 7px;
 
       img {
-        // height: 213.5px;
         width: 100%;
       }
     }
@@ -99,7 +97,6 @@ const props = defineProps({
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, auto);
       gap: 15px;
-      // align-items: start;
 
       .article-card.main {
         grid-column: 1/-1;

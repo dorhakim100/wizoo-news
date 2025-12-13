@@ -36,8 +36,6 @@ const props = defineProps({
     required: false,
   },
 })
-
-console.log(props.video)
 </script>
 
 <style scoped lang="scss">

@@ -63,7 +63,6 @@ const props = defineProps({
     gap: 1em;
 
     p {
-      //   align-self: start;
       line-height: 150%;
     }
   }

@@ -20,8 +20,6 @@ body {
   }
 
   main {
-    // width: 100vw;
-
     min-height: 100vh;
 
     margin-top: $header-height-wide;
@@ -29,8 +27,6 @@ body {
     justify-items: center;
 
     .page-container {
-      // width: $max-width-screen;
-
       width: 100%;
       > div:not(.full-width) {
         max-width: $max-width-screen;
@@ -47,7 +43,6 @@ body {
 @media (max-width: 1250px) {
   html,
   body {
-    // font-size: 14px;
   }
 }
 
@@ -61,7 +56,6 @@ h6 {
   margin: 0;
   padding: 0;
   line-height: 1.1;
-  // color
 }
 
 a {

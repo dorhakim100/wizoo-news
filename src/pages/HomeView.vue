@@ -59,8 +59,6 @@ const mostViewed = computed(() =>
 
 <style scoped lang="scss">
 .page-container {
-  // display: grid;
-  // gap: 5.0625em;
   & > div {
     margin-top: 5em;
     margin-bottom: 5em;

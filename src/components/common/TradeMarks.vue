@@ -29,7 +29,6 @@ const EDEN_TEXT = 'אפיון ועיצוב האתר'
 .trademarks-container {
   padding: 2em;
   background-color: $trademarks-bg;
-  //   font-size: 18px;
 
   .content-container {
     display: flex;
