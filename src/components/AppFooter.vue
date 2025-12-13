@@ -13,6 +13,28 @@
           </div>
         </div>
       </div>
+      <div class="sections-container">
+        <div
+          v-for="(section, index) in links"
+          :key="`${section.title}-${index}`"
+          class="section-container"
+        >
+          <h4>{{ section.title }}</h4>
+          <ul>
+            <li
+              v-for="(link, i) in section.items"
+              :key="`${link}-${i}`"
+              class="pointer"
+            >
+              {{ link }}
+            </li>
+          </ul>
+          <div class="read-more-container pointer">
+            <span class="read-more">קרא עוד</span>
+            <ArrowDown class="arrow-down" />
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
@@ -28,6 +50,8 @@ import WhatsApp from '../assets/icons/socials-links/whatsapp.svg'
 import XIcon from '../assets/icons/socials-links/x.svg'
 import YouTube from '../assets/icons/socials-links/youtube.svg'
 
+import ArrowDown from '../assets/icons/arrow-down.svg'
+
 const socials = [
   { name: 'facebook', icon: Facebook },
   { name: 'instagram', icon: Instagram },
@@ -37,6 +61,10 @@ const socials = [
   { name: 'x', icon: XIcon },
   { name: 'youtube', icon: YouTube },
 ]
+
+import linksJson from '../assets/jsons/app-footer/footer-links.json'
+console.log(linksJson)
+const { links } = linksJson
 </script>
 
 <style scoped lang="scss">
@@ -45,13 +73,14 @@ const socials = [
 footer {
   margin-top: 7em;
   background-color: $primary;
-  height: 200px;
-  //   width: 100vw;
+  color: $text-white;
+  text-align: start;
 
   .content-container {
     position: relative;
     width: 100%;
     max-width: $max-width-screen;
+    padding: 120px 0 60px;
 
     margin: 0 auto;
 
@@ -86,6 +115,36 @@ footer {
           :deep(path) {
             fill: $white-background;
           }
+        }
+      }
+    }
+  }
+  .sections-container {
+    display: flex;
+    justify-content: space-between;
+
+    .section-container {
+      display: grid;
+      gap: 1em;
+      h4 {
+        font-size: 2em;
+      }
+
+      ul {
+        line-height: 250%;
+      }
+
+      .read-more-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .read-more {
+          color: $secondary;
+        }
+
+        .arrow-down {
+          margin-top: 3px;
         }
       }
     }
