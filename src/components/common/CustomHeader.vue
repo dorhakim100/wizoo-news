@@ -49,7 +49,7 @@ const props = defineProps({
     position: absolute;
     content: '';
     left: 150px;
-    right: 360px;
+    right: 330px;
     bottom: 5px;
     height: 1px;
   }
@@ -93,6 +93,12 @@ const props = defineProps({
   &.pink {
     &::after {
       background-color: $color-pink;
+    }
+  }
+
+  &.white {
+    &::after {
+      background-color: $text-white;
     }
   }
 
