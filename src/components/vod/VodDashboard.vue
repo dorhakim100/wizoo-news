@@ -56,6 +56,10 @@ const props = defineProps({
       .video-card-container:first-child {
         grid-row: 1/-1;
       }
+
+      @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

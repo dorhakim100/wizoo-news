@@ -111,5 +111,11 @@ const props = defineProps({
   p {
     font-size: 18px;
   }
+
+  @media (max-width: 800px) {
+    .text-container {
+      align-self: stretch;
+    }
+  }
 }
 </style>
