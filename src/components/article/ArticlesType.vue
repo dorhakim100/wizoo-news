@@ -63,9 +63,16 @@ const minArray = computed(() => {
   @media (max-width: 1216px) {
     max-width: 100vw;
     margin: 0 auto;
+    display: block;
+    padding: 10px;
 
     .articles-container {
-      display: grid;
+      display: block;
+      margin: 0 auto;
+
+      article {
+        width: 100%;
+      }
     }
   }
 }

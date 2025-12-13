@@ -102,6 +102,10 @@ const props = defineProps({
         grid-column: 1/-1;
         justify-self: center;
       }
+
+      @media (max-width: 1216px) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 

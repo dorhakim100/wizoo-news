@@ -95,5 +95,29 @@ const props = defineProps({
       font-size: 18px;
     }
   }
+
+  @media (max-width: 1216px) {
+    &.main {
+      grid-template-columns: 1fr;
+      .img-container {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+      }
+      .custom-date-container {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+      }
+    }
+    &:not(.main) {
+      grid-template-columns: minmax(161px, 1fr) 1fr;
+      .img-container {
+        grid-row: 1/-1;
+        min-width: 161px;
+      }
+      .custom-date-container {
+        align-self: end;
+      }
+    }
+  }
 }
 </style>
