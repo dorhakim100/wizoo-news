@@ -30,10 +30,12 @@ import { getArrayOfNumbers, getRandomInt } from '../services/utils.service'
 import { types } from '../config/article-types'
 import dashboardJson from '../assets/jsons/home-dashboard/home-dashboard.json'
 import vodDashboardJson from '../assets/jsons/vod-dashboard/vod-dashboard.json'
+import podcastDashboardJson from '../assets/jsons/podcast-dashboard/podcast-dashboard.json'
 
 import HomeDashboard from '../components/HomeDashboard.vue'
 import ArticlesType from '../components/article/ArticlesType.vue'
 import VodDashboard from '../components/vod/VodDashboard.vue'
+import PodcastDashboard from '../components/podcast/PodcastDashboasrd.vue'
 
 const { articles, event1, event2, vod } = dashboardJson
 const { vodHeader, videos } = vodDashboardJson
