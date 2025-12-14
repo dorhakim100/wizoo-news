@@ -58,13 +58,13 @@ const podcasts = ref(podcastDashboardJson.podcasts)
 
 const dashboardArticles = computed(() => {
   return getArrayOfNumbers(0, 6).map(() => {
-    return articles[getRandomInt(0, articles.length - 1)]
+    return articles.value[getRandomInt(0, articles.value.length - 1)]
   })
 })
 
 const mostViewed = computed(() =>
   getArrayOfNumbers(1, 3).map(() => {
-    return articles[getRandomInt(0, articles.length - 1)]
+    return articles.value[getRandomInt(0, articles.value.length - 1)]
   })
 )
 </script>
