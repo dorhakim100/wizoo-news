@@ -1,18 +1,13 @@
 <template>
-  <header
-    :class="`header-container ${isMobile ? 'mobile' : ''} ${
-      !isTop0 ? 'scrolled' : ''
-    }`"
-  >
+  <header :class="`header-container  ${!isTop0 ? 'scrolled' : ''}`">
+    <img :src="`${mobile}`" :class="`mobile-logo`" alt="" />
     <img
-      :src="`${isMobile ? mobile : desktop}`"
-      :class="`${!isTop0 && !isMobile ? 'hide' : ''}`"
+      :src="`${desktop}`"
+      :class="`${!isTop0 ? 'hide' : ''} desktop-logo`"
       alt=""
     />
     <div
-      :class="`basic-logo-container pointer ${
-        !isTop0 && !isMobile ? 'scrolled' : ''
-      }`"
+      :class="`basic-logo-container pointer ${!isTop0 ? 'scrolled' : ''}`"
       @click="navigateToHome()"
     >
       <MerkazBasicLogo class="basic-logo" />
@@ -56,7 +51,7 @@
         <CustomSearch v-model:searchValue="searchValue" />
       </div>
     </div>
-    <HeaderMobileMenu v-if="isMobile" />
+    <HeaderMobileMenu class="menu-icon" />
   </header>
 </template>
 
@@ -82,7 +77,6 @@ const router = useRouter()
 
 const searchValue = ref('')
 
-const isMobile = ref(window.innerWidth <= mobileBreakpoint)
 const isTop0 = ref(true)
 
 const upperLinks = computed(() => links.filter((link) => link.isUpper))
@@ -90,12 +84,10 @@ const lowerLinks = computed(() => links.filter((link) => !link.isUpper))
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
-  window.addEventListener('resize', handleResize)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
-  window.removeEventListener('resize', handleResize)
 })
 
 function handleScroll() {
@@ -105,12 +97,6 @@ function handleScroll() {
   } else {
     isTop0.value = true
   }
-}
-
-function handleResize() {
-  window.innerWidth <= mobileBreakpoint
-    ? (isMobile.value = true)
-    : (isMobile.value = false)
 }
 
 const navigateToHome = () => {
@@ -154,7 +140,9 @@ const navigateToHome = () => {
     transition: 0.3s ease;
 
     &.scrolled {
-      inset-inline-start: 10px;
+      @media (min-width: 600px) {
+        inset-inline-start: 10px;
+      }
     }
   }
 
@@ -221,21 +209,30 @@ const navigateToHome = () => {
     }
   }
   &.scrolled {
-    height: 57px;
     background-color: $primary;
 
-    padding-inline-start: 15px;
-
+    @media (min-width: 600px) {
+      height: 57px;
+    }
     .upper-nav {
       margin-inline-start: 50px;
     }
   }
-  &.mobile {
+  @media (min-width: 600px) {
+    .mobile-logo {
+      display: none;
+    }
+  }
+  @media (max-width: 600px) {
     height: $header-height-narrow;
     background-color: $primary;
     align-items: center;
     grid-auto-flow: column;
     padding: 12px;
+
+    .desktop-logo {
+      display: none;
+    }
 
     img {
       padding: 0;
@@ -248,6 +245,12 @@ const navigateToHome = () => {
     .links-container {
       position: absolute;
       left: -5000px;
+    }
+  }
+
+  .menu-icon {
+    @media (min-width: 600px) {
+      display: none;
     }
   }
 }
