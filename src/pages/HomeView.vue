@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
 import { getArrayOfNumbers, getRandomInt } from '../services/utils.service'
 import { types } from '../config/article-types'
@@ -45,9 +45,16 @@ import ArticlesType from '../components/article/ArticlesType.vue'
 import VodDashboard from '../components/vod/VodDashboard.vue'
 import PodcastDashboard from '../components/podcast/PodcastDashboasrd.vue'
 
-const { articles, event1, event2, vod } = dashboardJson
-const { vodHeader, videos } = vodDashboardJson
-const { podcastHeader, podcasts } = podcastDashboardJson
+const articles = ref(dashboardJson.articles)
+const event1 = ref(dashboardJson.event1)
+const event2 = ref(dashboardJson.event2)
+const vod = ref(dashboardJson.vod)
+
+const vodHeader = ref(vodDashboardJson.vodHeader)
+const videos = ref(vodDashboardJson.videos)
+
+const podcastHeader = ref(podcastDashboardJson.podcastHeader)
+const podcasts = ref(podcastDashboardJson.podcasts)
 
 const dashboardArticles = computed(() => {
   return getArrayOfNumbers(0, 6).map(() => {
