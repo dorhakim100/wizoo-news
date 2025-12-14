@@ -34,6 +34,9 @@ body {
       }
       .full-width {
         width: calc(100vw - 15px) !important;
+        @media (max-width: 600px) {
+          width: 100vw !important;
+        }
       }
       margin: 81px auto;
       @media (max-width: 1216px) {

@@ -60,7 +60,6 @@ import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 import { navigateToLink } from '../services/utils.service'
-import { mobileBreakpoint } from '../config/css-variables'
 import { ROUTES } from '../router/const'
 
 import CustomSearch from '../components/common/CustomSearch.vue'
