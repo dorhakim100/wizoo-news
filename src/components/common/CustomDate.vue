@@ -2,7 +2,7 @@
   <div class="custom-date-container">
     <slot />
     <Divider type="vertical" :style="{ backgroundColor: dividerColor || '' }" />
-    <span>{{ date }}</span>
+    <span>{{ hebrewDate }}</span>
     <template v-if="afterValue">
       <Divider
         type="vertical"
@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+import { computed, defineProps } from 'vue'
 import { Divider } from 'ant-design-vue'
 
 const props = defineProps({
@@ -30,6 +30,13 @@ const props = defineProps({
     type: String,
     required: false,
   },
+})
+
+const hebrewDate = computed(() => {
+  const d = new Date(props.date)
+  const day = String(d.getDate()).padStart(2, '0')
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  return `${day}.${month}`
 })
 </script>
 
